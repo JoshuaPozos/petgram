@@ -4,9 +4,9 @@ import { List, Item } from "./styles";
 
 export const ListOfPhotoCards = () => (
   <List>
-    {[1, 2, 3, 4, 5].map(photocard => (
-      <Item key={photocard}>
-        <PhotoCard />
+    {[1, 2, 3, 4, 5].map(id => (
+      <Item key={id}>
+        <PhotoCard id={id} />
       </Item>
     ))}
   </List>

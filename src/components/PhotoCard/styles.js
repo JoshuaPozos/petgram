@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { fadeIn } from "../../styles/Animations";
 
 export const ImageWraper = styled.div`
@@ -31,5 +31,12 @@ export const Button = styled.button`
   padding-top: 8px;
   & svg {
     margin-right: 4px;
+    ${props =>
+      props.liked &&
+      css`
+         {
+          fill: #8ca4e1;
+        }
+      `}
   }
 `;
