@@ -12,13 +12,11 @@ export const PhotoCard = ({ id, likes = 0, src = DEFAULT_IMAGE }) => {
   const key = `like-${id}`;
   const [liked, setLiked] = useLocalStorage(key, false);
 
-  console.log(liked);
-
   return (
     <Article ref={ref}>
       {show && (
         <Fragment>
-          <a href={`/detail/${id}`}>
+          <a href={`/?detail=${id}`}>
             <ImageWraper>
               <Img src={src} atl={id} />
             </ImageWraper>
